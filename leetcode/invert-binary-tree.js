@@ -16,9 +16,11 @@ var invertTree = function (root) {
       const tempNode = node.left
       node.left = node.right
       node.right = tempNode
+
+      invertNode(node.left)
+      invertNode(node.right)
     }
-    invertNode(node.left)
-    invertNode(node.right)
+
   }
 
   invertNode(root)
