@@ -10,7 +10,13 @@
  * @return {number}
  */
 var trailingZeroes = function(n) {
-    
+    let count = 0
+    while(n > 4) {
+      const template = n / 5
+      count += parseInt(template)
+      n = template
+    }
+    return count
 };
 // @lc code=end
 
